@@ -26,6 +26,11 @@
 - 'git branch <branchname>' : new branch named 'branchname' is created, but git does not move to the newly created branch on its own. New branch only created
 
 - 'git checkout <branchname>' : git moves to the 'branchname'
+- 'git merge <brancname-to-be-merged-in-the-present-branch>': merge branches
+
+- 'git checkout -b <branchname>' : checkout to the branchname and if branch does not exist create it
+
+- ' git commit -am "message" ' <-- git add . + git commit -m "message" . It won't work if you have made a new file and it is untracked
 
 
 
