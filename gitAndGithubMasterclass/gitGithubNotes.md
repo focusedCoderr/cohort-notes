@@ -1,17 +1,16 @@
 # Git and Github Master Class
 
-- Git - version control system (VCS)
-- CLI tool installed on computer
-- git init - git starts tracking the project
-  -u -> git add (filename) -> start trackinhg - u--> A
-- A- Index Added
+- Git - VCS (Version Control System)
+- Why we need VCS - 
+  1. For tracking code
+  2. For backup
+  3. For collaboration with other developers
 
-- 'git add .' -> start tracking all files in the project
-
-- 'git status' -> shows which files are tracked..which are untracked
-
-- index file in .git folder -> ??
-
--
-
-# ASSIGNMENTS
+- git init
+- 'U' in vs code besides filename - untracked
+- 'A' - index Added after git add <filename>
+- .git -> index file: has a track record of which files are to be tracked
+- 'git status' : shows current condition: which files are tracked, which are not
+- 'git log' : shows history of commits
+- 'git diff <commitX>  <commitY>' : changes or difference between two commits
+ 
