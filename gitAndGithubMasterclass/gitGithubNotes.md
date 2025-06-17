@@ -18,4 +18,4 @@
 
 - 'git reset <commitID>' -> brings the head back to the 'commitID' -> all the changes after that 'commitID' are now in the staging area waiting to be commited.
 
-- 'git reset --hard <commitID>' -> brings the head back to the 'commitID' -> all the changes after that are lost
+- 'git reset --hard <commitID>' -> brings the head back to the 'commitID' -> all the changes after that are lost.
