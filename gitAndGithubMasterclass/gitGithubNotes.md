@@ -23,6 +23,9 @@
 - If reset done, the push will not happen because remote is ahead by some commits -> in that case you CAN use "git push -f". Although other strategies might be possible depending on the situation.
 - 'git remote -v' -> where to push and pull from
 
+- 'git branch <branchname>' : new branch named 'branchname' is created, but git does not move to the newly created branch on its own. New branch only created
+
+- 'git checkout <branchname>' : git moves to the 'branchname'
 
 
 
