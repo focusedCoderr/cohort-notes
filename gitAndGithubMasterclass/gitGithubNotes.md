@@ -1,7 +1,8 @@
 # Git and Github Master Class
 
 - Git - VCS (Version Control System)
-- Why we need VCS - 
+- Why we need VCS -
+
   1. For tracking code
   2. For backup
   3. For collaboration with other developers
@@ -13,7 +14,7 @@
 - 'git status' : shows current condition: which files are tracked, which are not
 - 'git log' : shows history of commits
 - 'git log --oneline' : each commit is shown in one line
-- 'git diff <commitX>  <commitY>' : changes or difference between two commits
+- 'git diff <commitX> <commitY>' : changes or difference between two commits
 - 'M' - modified
 - how commit id is created : git reads all the code files -> hash them with SHA1-> if no changes hash will be same as previous commit id -> so no new commit id
 
@@ -31,12 +32,14 @@
 
 - ' git commit -am "message" ' <-- git add . + git commit -m "message" . It won't work if you have made a new file and it is untracked
 
-
-
-
-
+- 'git push -f' -> forcefully push to the github
+- note: learn the command to set remote upstream
+- 'git merge <branchname>' : merge the <branchname> to the current branch
+- 'git merge --squash <branchname>' : squash the <branchname> and merge the changes on the current branch. But the new squashed changes are not committed automatically, but left in staging area. the developer on main has to commit it with the suitable message.
+- If I am in <branchname> and i do 'git rebase main' ->it sets the base of <branchname> to the latest commit on the main. rebase basically rewrites timeline
 
 # Assignment
+
 - Company Name : Chai Cohort
 - onboarding documentation prepare
 - new employee / intern -> this guide will be provided to him on how to maintain git
