@@ -27,6 +27,10 @@
 
 - 'git checkout <branchname>' : git moves to the 'branchname'
 
+- 'git checkout -b <branchname>' : checkout to the branchname and if branch does not exist create it
+
+- ' git commit -am "message" ' <-- git add . + git commit -m "message" . It won't work if you have made a new file and it is untracked
+
 
 
 
