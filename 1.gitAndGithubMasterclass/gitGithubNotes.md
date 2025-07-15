@@ -1,3 +1,9 @@
+# Class Links
+
+1. https://app.eraser.io/workspace/Mb1uSbRhDKsd53ne0NX9
+2. https://app.eraser.io/workspace/06oTmTiO17QjeuTDkp7O
+
+
 # Git and Github Master Class
 
 - Git - VCS (Version Control System)
