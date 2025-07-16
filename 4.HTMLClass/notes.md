@@ -68,3 +68,18 @@
 - To link to a section on the same page --> Give that section an id. for example: 'id1' --> write a tag with href="#id1". This will link a tag to the section having id --> "id1"
 - To download a file --> write path to file in href and add a download attribute. for example:
   `<a href="./abc.png" download>Click me to download this file</a>`
+- To send an email using href `<a href="mailto:gyadav187@gmail.com">Send Email</a>` --> will open email client to send email to gyadav187@gmail.com
+- Similarly to open dialer on phone to call a number --> `<a href = "tel:+919999999999"></a> `
+- `<link rel="" href="">` --> link is empty tag --> only contains attributes --> rel can be stylesheet, favicon etc.
+- `<img src="./free-nature-images.jpg" alt="nature image" title="title of the image. hover mouse over the image to see this text" width="400px">` --> src--> location of the image | alt--> alternate text that will appear on the screen if image is not loaded | title --> read the attribute
+
+- for making table --> `<table>  <tr> <th or td>DATA</th or td>  </tr>  </table>`
+- table tag is the container
+- tr starts a row
+- th --> used for column heading or row heading --> it is table header cell
+- td --> it is also data cell but...used for regular data
+
+- colspan attribute --> used for merging cells horizontally --> only can be used in td or th
+- rowspan attribute --> used for merging cells vertically --> only can be used in td or th
+
+- eg. : `<th colspan="2">` for merging two cells horizontally and `<th rowspan="3">` --> for merging 3 cells vertically
