@@ -1,0 +1,56 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+Welcome to this quick introduction to HTML.
+
+00:00:04.000 --> 00:00:08.000
+In this video, you'll learn the basics of how web pages are structured.
+
+00:00:08.000 --> 00:00:13.000
+HTML stands for HyperText Markup Language.
+
+00:00:13.000 --> 00:00:17.000
+It’s the standard language used to create the content of web pages.
+
+00:00:17.000 --> 00:00:21.000
+Let’s start with the basic structure of an HTML document.
+
+00:00:21.000 --> 00:00:27.000
+Every HTML file begins with a doctype and the `<html>` tag.
+
+00:00:27.000 --> 00:00:33.000
+Inside the `<html>`, we have two main parts: the `<head>` and the `<body>`.
+
+00:00:33.000 --> 00:00:39.000
+The `<head>` contains metadata, links to stylesheets, and the page title.
+
+00:00:39.000 --> 00:00:43.000
+The `<body>` contains all the visible content shown on the page.
+
+00:00:43.000 --> 00:00:48.000
+Let’s now add a heading using the `<h1>` tag.
+
+00:00:48.000 --> 00:00:53.000
+Next, we’ll add a paragraph using the `<p>` tag.
+
+00:00:53.000 --> 00:00:59.000
+These tags help structure your content so browsers can display it correctly.
+
+00:00:59.000 --> 00:01:05.000
+There are also semantic elements like `<header>`, `<main>`, and `<footer>`.
+
+00:01:05.000 --> 00:01:10.000
+They help give meaning to the different parts of your page.
+
+00:01:10.000 --> 00:01:15.000
+Now you know the basic structure of an HTML page!
+
+00:01:15.000 --> 00:01:20.000
+Keep practicing and you’ll be building full webpages in no time.
+
+00:01:20.000 --> 00:01:25.000
+Thanks for watching, and don’t forget to like and subscribe!
+
+00:01:25.000 --> 00:02:00.000
+[Music plays]
+

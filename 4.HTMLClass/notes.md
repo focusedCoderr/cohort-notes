@@ -150,12 +150,12 @@ spaces. ### Only Numbers (any number of digits)
 <input type="text" pattern="[0-9]+" />
 - Accepts 123, 56789, etc. - No letters or symbols allowed.
 ````
-
+---
 - `<header></header>` --> semantic element --> used to define the introductory portion of the webpage or section.
 - it usually consists website title, navigation menu, logo, tagline etc.
 
 - `<nav><ul><li>Home</li><li>About us</li></ul></nav>` --> semantic html5 element --> used to define a section of navigation links --> usually used in menus or table of contents --> wraps the main navigation links
-
+---
 - a semantic element tells us what the content is, not how it looks
 - `<main>` --> this is a semantic element and used to show what the core content of the website is - the part directly related to the page’s main topic.
 - `<section>` --> this is a semantic element and is used to group related content under a single heading. Think of it like a chapter in a book. Common use cases: "Features", "Services", "Testimonials" etc.
@@ -172,3 +172,30 @@ spaces. ### Only Numbers (any number of digits)
 - for example: `<body><!-- header --><!-- main --><!-- aside --><footer><p>&copy; 2025 Gaurav Yadav. All rights reserved.</p></footer></body>`
 - `aria-label` -> it is an attribute → gives screen readers a custom label for an element → useful when there's no visible label → improves accessibility
 - for example: `<nav aria-label="Main navigation"><ul><li><a href="#">Home</a></li><li><a href="#">Contact Us</a></li><li><a href="#">About Us</a></li></ul></nav>` --> Screen readers will now say something like: “Main navigation, list with 3 items…”
+---
+- `<video>` --> used to embed video player in a webpage
+#### Atrributes used in video tag
+- controls --> adds play, pause, volume, fullscreen buttons --> boolean
+- autoplay --> video starts playing automatically when the page loads --> boolean
+- muted --> required for autoplay to work in most browsers --> boolean
+- poster --> sets a placeholder image (like a thumbnail) before video starts
+- width / height --> controls the size of the video
+
+- `<track>` --> adds subtitles, captions, chapters, etc. to a video
+
+#### Atrributes used in track tag
+
+- src --> file path to subtitle (usually .vtt)
+- kind --> type of track (e.g. subtitles, captions)
+- srclang --> language code (e.g. en, fr)
+- label --> name shown to user in subtitle menu
+- default --> makes this subtitle selected by default --> boolean
+
+---
+
+- .vtt file --> plain text file in WebVTT format used for subtitles
+
+#### How to use video and track elements
+
+- `<video src="" controls autoplay muted><track src="" srclang="" label="" default></track></video>`
+
