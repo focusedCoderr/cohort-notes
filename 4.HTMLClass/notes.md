@@ -91,6 +91,8 @@
 - GET --> appends data in url. --> less safe --> data visible to attackers
 - POST --> puts data in the request --> safer than GET
 
+- 'required' attribute is used if a particular input field is compulsory to be filled
+
 - `<input type="text" name="brand">` --> name attribute is very important --> if you want to send the data of the input field to the backend --> you need name attribute --> the data is sent in key value pair and here the key is "brand" and value will be the data which user enters. --> If you don't give name attribute, the data of that field would not be sent because the key would be missing.
 
 - `<label for="brandname>Enter the name of the brand</label>
@@ -98,71 +100,75 @@
 
 - label is used to define what the input field is used for. its "for" attribute's value is the id of the element for which this label element is used.
 
-- `<input type="text" name="username" value="gaurav">` --> value is used to give default value to an input field. If the user submits the form as it is, this default value will be sent to the backend and if the user changes the value in the input field, the new value is sent. --> It has varied uses like it is used in radio buttons, checkboxes, option in select etc. but the concept is same always. the value is sent to the backend. 
+- `<input type="text" name="username" value="gaurav">` --> value is used to give default value to an input field. If the user submits the form as it is, this default value will be sent to the backend and if the user changes the value in the input field, the new value is sent. --> It has varied uses like it is used in radio buttons, checkboxes, option in select etc. but the concept is same always. the value is sent to the backend.
 
 - pattern attribute is sometimes used to restrict the type of data that can be entered in a form field. in the pattern attribute --> type the required regular expression to restrict the data to be entered in the form.
 
-## ✅ Regular Expressions (Regex) for Form Validation
+## Regular Expressions (Regex) for Form Validation
 
 - Regular expressions are patterns used to **define the structure of the input** that we want to allow.
 - They are used inside the `pattern` attribute of form fields to **validate user input** before the form is submitted.
 
 ---
 
-### 🧩 Common Regex Symbols:
+### Common Regex Symbols:
 
-| Symbol     | Meaning                                    | Example           | Meaning of Example                  |
-|------------|---------------------------------------------|-------------------|--------------------------------------|
-| `^`        | Start of the input                          | `^abc`            | starts with "abc"                    |
-| `$`        | End of the input                            | `xyz$`            | ends with "xyz"                      |
-| `.`        | Any one character                           | `a.c`             | matches `abc`, `axc`, `a1c`, etc.    |
-| `[abc]`    | a or b or c                                 | `[aeiou]`         | matches any one vowel                |
-| `[^abc]`   | NOT a or b or c                             | `[^0-9]`          | matches any non-digit                |
-| `[0-9]`    | matches any digit                           |                   | same as `\d`                         |
-| `{n}`      | exactly n times                             | `[0-9]{4}`        | exactly 4 digits                     |
-| `{n,}`     | at least n times                            | `[a-z]{2,}`       | minimum 2 letters                    |
-| `{n,m}`    | between n and m times                       | `[0-9]{2,5}`      | 2 to 5 digits                        |
-| `|`        | OR                                          | `cat|dog`         | matches "cat" or "dog"              |
-| `\`        | Escape a special character                  | `\+`              | matches `+` literally                |
-
----
-
-### 📌 Examples You Can Use in Forms:
-
-#### ✅ Only 10-digit phone number:
-```html
-<input type="text" pattern="^[0-9]{10}$">
+| Symbol   | Meaning                    | Example      | Meaning of Example                |
+| -------- | -------------------------- | ------------ | --------------------------------- | ---- | ---------------------- |
+| `^`      | Start of the input         | `^abc`       | starts with "abc"                 |
+| `$`      | End of the input           | `xyz$`       | ends with "xyz"                   |
+| `.`      | Any one character          | `a.c`        | matches `abc`, `axc`, `a1c`, etc. |
+| `[abc]`  | a or b or c                | `[aeiou]`    | matches any one vowel             |
+| `[^abc]` | NOT a or b or c            | `[^0-9]`     | matches any non-digit             |
+| `[0-9]`  | matches any digit          |              | same as `\d`                      |
+| `{n}`    | exactly n times            | `[0-9]{4}`   | exactly 4 digits                  |
+| `{n,}`   | at least n times           | `[a-z]{2,}`  | minimum 2 letters                 |
+| `{n,m}`  | between n and m times      | `[0-9]{2,5}` | 2 to 5 digits                     |
+| `        | `                          | OR           | `cat                              | dog` | matches "cat" or "dog" |
+| `\`      | Escape a special character | `\+`         | matches `+` literally             |
 
 ---
 
-## ✨ More Regex Examples for Forms
+### Examples You Can Use in Forms:
 
-These are useful patterns for validating common types of inputs:
+#### Only 10-digit phone number:
 
----
+````html
+<input type="text" pattern="^[0-9]{10}$" />
 
-### ✅ Only Letters (a–z, A–Z)
+--- ## ✨ More Regex Examples for Forms These are useful patterns for validating
+common types of inputs: --- ### ✅ Only Letters (a–z, A–Z) ```html
+<input type="text" pattern="[a-zA-Z]+" />
 
-```html
-<input type="text" pattern="[a-zA-Z]+">
+- Accepts one or more English letters only. - Rejects numbers or special
+characters. ### Letters and Spaces (like a full name) `<input
+	type="text"
+	pattern="[a-zA-Z\s]+"
+/>` - Accepts John Doe, Alice Smith, etc. - Useful for names that may include
+spaces. ### Only Numbers (any number of digits)
 
-- Accepts one or more English letters only.
+<input type="text" pattern="[0-9]+" />
+- Accepts 123, 56789, etc. - No letters or symbols allowed.
+````
 
-- Rejects numbers or special characters.
+- `<header></header>` --> semantic element --> used to define the introductory portion of the webpage or section.
+- it usually consists website title, navigation menu, logo, tagline etc.
 
-### Letters and Spaces (like a full name)
+- `<nav><ul><li>Home</li><li>About us</li></ul></nav>` --> semantic html5 element --> used to define a section of navigation links --> usually used in menus or table of contents --> wraps the main navigation links
 
-`<input type="text" pattern="[a-zA-Z\s]+">`
-- Accepts John Doe, Alice Smith, etc.
+- a semantic element tells us what the content is, not how it looks
+- `<main>` --> this is a semantic element and used to show what the core content of the website is - the part directly related to the page’s main topic.
+- `<section>` --> this is a semantic element and is used to group related content under a single heading. Think of it like a chapter in a book. Common use cases: "Features", "Services", "Testimonials" etc.
 
-- Useful for names that may include spaces.
+- for example: `<section><h2>Our Services</h2><p>We offer web development, design, and SEO optimization.</p></section>`
 
+- `<article>` --> a semantic element --> used for a self-contained content --> example use cases: blog post, news article, forum post, product listing
+- for example : `<article><h3>How to Learn HTML</h3><p>Start with the basics, practice building pages, and explore tutorials.</p></article>`
 
-### Only Numbers (any number of digits)
+- `<aside>` → semantic element for related or extra content → often used as a sidebar → not part of the main flow but contextually related
+- for example: `<aside><h2>Related Links</h2><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML Documentation</a></li><li><a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></li><li><a href="https://htmlreference.io/">HTML Reference</a></li></ul></aside>`
 
-<input type="text" pattern="[0-9]+">
-- Accepts 123, 56789, etc.
-
-- No letters or symbols allowed.
-
-
+- `<footer>` → semantic element for the bottom section of a page or section → commonly includes copyright, author info, or contact details
+- for example: `<body><!-- header --><!-- main --><!-- aside --><footer><p>&copy; 2025 Gaurav Yadav. All rights reserved.</p></footer></body>`
+- `aria-label` -> it is an attribute → gives screen readers a custom label for an element → useful when there's no visible label → improves accessibility
+- for example: `<nav aria-label="Main navigation"><ul><li><a href="#">Home</a></li><li><a href="#">Contact Us</a></li><li><a href="#">About Us</a></li></ul></nav>` --> Screen readers will now say something like: “Main navigation, list with 3 items…”
