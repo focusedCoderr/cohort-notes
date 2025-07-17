@@ -83,3 +83,86 @@
 - rowspan attribute --> used for merging cells vertically --> only can be used in td or th
 
 - eg. : `<th colspan="2">` for merging two cells horizontally and `<th rowspan="3">` --> for merging 3 cells vertically
+
+- some basics to know about form:
+- `<form></form>` tag is the container
+- `<form action="/submit" method="POST"></form>` --> action attribute is used for defining the url of the backend where the form data will be processed
+- method is used to define the method through which the form will be sent for processing
+- GET --> appends data in url. --> less safe --> data visible to attackers
+- POST --> puts data in the request --> safer than GET
+
+- `<input type="text" name="brand">` --> name attribute is very important --> if you want to send the data of the input field to the backend --> you need name attribute --> the data is sent in key value pair and here the key is "brand" and value will be the data which user enters. --> If you don't give name attribute, the data of that field would not be sent because the key would be missing.
+
+- `<label for="brandname>Enter the name of the brand</label>
+<input type="text" name="brand" id="brandname">`
+
+- label is used to define what the input field is used for. its "for" attribute's value is the id of the element for which this label element is used.
+
+- `<input type="text" name="username" value="gaurav">` --> value is used to give default value to an input field. If the user submits the form as it is, this default value will be sent to the backend and if the user changes the value in the input field, the new value is sent. --> It has varied uses like it is used in radio buttons, checkboxes, option in select etc. but the concept is same always. the value is sent to the backend. 
+
+- pattern attribute is sometimes used to restrict the type of data that can be entered in a form field. in the pattern attribute --> type the required regular expression to restrict the data to be entered in the form.
+
+## ✅ Regular Expressions (Regex) for Form Validation
+
+- Regular expressions are patterns used to **define the structure of the input** that we want to allow.
+- They are used inside the `pattern` attribute of form fields to **validate user input** before the form is submitted.
+
+---
+
+### 🧩 Common Regex Symbols:
+
+| Symbol     | Meaning                                    | Example           | Meaning of Example                  |
+|------------|---------------------------------------------|-------------------|--------------------------------------|
+| `^`        | Start of the input                          | `^abc`            | starts with "abc"                    |
+| `$`        | End of the input                            | `xyz$`            | ends with "xyz"                      |
+| `.`        | Any one character                           | `a.c`             | matches `abc`, `axc`, `a1c`, etc.    |
+| `[abc]`    | a or b or c                                 | `[aeiou]`         | matches any one vowel                |
+| `[^abc]`   | NOT a or b or c                             | `[^0-9]`          | matches any non-digit                |
+| `[0-9]`    | matches any digit                           |                   | same as `\d`                         |
+| `{n}`      | exactly n times                             | `[0-9]{4}`        | exactly 4 digits                     |
+| `{n,}`     | at least n times                            | `[a-z]{2,}`       | minimum 2 letters                    |
+| `{n,m}`    | between n and m times                       | `[0-9]{2,5}`      | 2 to 5 digits                        |
+| `|`        | OR                                          | `cat|dog`         | matches "cat" or "dog"              |
+| `\`        | Escape a special character                  | `\+`              | matches `+` literally                |
+
+---
+
+### 📌 Examples You Can Use in Forms:
+
+#### ✅ Only 10-digit phone number:
+```html
+<input type="text" pattern="^[0-9]{10}$">
+
+---
+
+## ✨ More Regex Examples for Forms
+
+These are useful patterns for validating common types of inputs:
+
+---
+
+### ✅ Only Letters (a–z, A–Z)
+
+```html
+<input type="text" pattern="[a-zA-Z]+">
+
+- Accepts one or more English letters only.
+
+- Rejects numbers or special characters.
+
+### Letters and Spaces (like a full name)
+
+`<input type="text" pattern="[a-zA-Z\s]+">`
+- Accepts John Doe, Alice Smith, etc.
+
+- Useful for names that may include spaces.
+
+
+### Only Numbers (any number of digits)
+
+<input type="text" pattern="[0-9]+">
+- Accepts 123, 56789, etc.
+
+- No letters or symbols allowed.
+
+
