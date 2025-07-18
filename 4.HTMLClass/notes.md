@@ -199,3 +199,33 @@ spaces. ### Only Numbers (any number of digits)
 
 - `<video src="" controls autoplay muted><track src="" srclang="" label="" default></track></video>`
 
+---
+
+- `<audio>` --> used to embed audio content like music or sound effects
+
+- `controls` --> adds play/pause/volume buttons to the player
+
+- `<source>` --> defines audio file and type (multiple sources = better browser support)
+type="audio/mpeg" --> for .mp3 files
+type="audio/ogg" --> for .ogg files
+
+- for example: `<audio controls><source src="audio.mp3" type="audio/mpeg"><source src="audio.ogg" type="audio/ogg">Your browser does not support the audio element.</audio>`
+
+- fallback content --> text between `<audio>` or `<video>` tags → shown only if browser does not support the media tag or format
+not shown if at least one `<source>` is playable
+
+#### How to embed youtube video using iframe
+
+- `<iframe>` --> embeds another webpage inside the current page (e.g. YouTube video player)
+
+- src --> set to "https://www.youtube.com/embed/VIDEO_ID"
+- width / height --> size of the video player in pixels
+- allowfullscreen --> allows the video to be played in fullscreen
+- allow --> allows features like autoplay, clipboard, fullscreen, etc.
+- title --> accessibility label for screen readers
+
+- we do NOT have to write the `<iframe>` code manually
+- YouTube provides the `<iframe>` code → go to video → click Share → click Embed → copy the code
+- for example : `<iframe width="560" height="315" src="https://www.youtube.com/embed/z_k5keq1qKs?si=vIi5Ffsx-USsVDF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>` --> this code was provided by youtube.
+
+
