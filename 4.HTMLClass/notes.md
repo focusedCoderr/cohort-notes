@@ -70,6 +70,11 @@
   `<a href="./abc.png" download>Click me to download this file</a>`
 - To send an email using href `<a href="mailto:gyadav187@gmail.com">Send Email</a>` --> will open email client to send email to gyadav187@gmail.com
 - Similarly to open dialer on phone to call a number --> `<a href = "tel:+919999999999"></a> `
+- title attribute --> shows extra info on hover (tooltip)
+  used like: `<a title="...">` or `<img title="...">`
+  for user help, not styling
+  optional
+
 - `<link rel="" href="">` --> link is empty tag --> only contains attributes --> rel can be stylesheet, favicon etc.
 - `<img src="./free-nature-images.jpg" alt="nature image" title="title of the image. hover mouse over the image to see this text" width="400px">` --> src--> location of the image | alt--> alternate text that will appear on the screen if image is not loaded | title --> read the attribute
 
@@ -101,6 +106,35 @@
 - label is used to define what the input field is used for. its "for" attribute's value is the id of the element for which this label element is used.
 
 - `<input type="text" name="username" value="gaurav">` --> value is used to give default value to an input field. If the user submits the form as it is, this default value will be sent to the backend and if the user changes the value in the input field, the new value is sent. --> It has varied uses like it is used in radio buttons, checkboxes, option in select etc. but the concept is same always. the value is sent to the backend.
+
+---
+
+- `<input type="date">`  
+  → used to pick a date from a calendar
+
+- Gives a date picker UI in supported browsers
+
+- Stores value in YYYY-MM-DD format (like 2000-08-05)
+
+- Can set:
+
+- min → minimum date
+- max → maximum date
+- required → must be filled
+
+- Used for: DOB, booking dates, deadlines
+
+---
+
+- `<input type="color">` --> opens a color picker where you can choose any color
+
+- Used to collect a user’s favorite color or theme preferences
+
+- Default value: #000000 (black)
+
+- Returns value in hex format (#RRGGBB)
+
+---
 
 - pattern attribute is sometimes used to restrict the type of data that can be entered in a form field. in the pattern attribute --> type the required regular expression to restrict the data to be entered in the form.
 
@@ -150,12 +184,16 @@ spaces. ### Only Numbers (any number of digits)
 <input type="text" pattern="[0-9]+" />
 - Accepts 123, 56789, etc. - No letters or symbols allowed.
 ````
+
 ---
+
 - `<header></header>` --> semantic element --> used to define the introductory portion of the webpage or section.
 - it usually consists website title, navigation menu, logo, tagline etc.
 
 - `<nav><ul><li>Home</li><li>About us</li></ul></nav>` --> semantic html5 element --> used to define a section of navigation links --> usually used in menus or table of contents --> wraps the main navigation links
+
 ---
+
 - a semantic element tells us what the content is, not how it looks
 - `<main>` --> this is a semantic element and used to show what the core content of the website is - the part directly related to the page’s main topic.
 - `<section>` --> this is a semantic element and is used to group related content under a single heading. Think of it like a chapter in a book. Common use cases: "Features", "Services", "Testimonials" etc.
@@ -172,9 +210,13 @@ spaces. ### Only Numbers (any number of digits)
 - for example: `<body><!-- header --><!-- main --><!-- aside --><footer><p>&copy; 2025 Gaurav Yadav. All rights reserved.</p></footer></body>`
 - `aria-label` -> it is an attribute → gives screen readers a custom label for an element → useful when there's no visible label → improves accessibility
 - for example: `<nav aria-label="Main navigation"><ul><li><a href="#">Home</a></li><li><a href="#">Contact Us</a></li><li><a href="#">About Us</a></li></ul></nav>` --> Screen readers will now say something like: “Main navigation, list with 3 items…”
+
 ---
+
 - `<video>` --> used to embed video player in a webpage
+
 #### Atrributes used in video tag
+
 - controls --> adds play, pause, volume, fullscreen buttons --> boolean
 - autoplay --> video starts playing automatically when the page loads --> boolean
 - muted --> required for autoplay to work in most browsers --> boolean
@@ -199,20 +241,18 @@ spaces. ### Only Numbers (any number of digits)
 
 - `<video src="" controls autoplay muted><track src="" srclang="" label="" default></track></video>`
 
----
-
 - `<audio>` --> used to embed audio content like music or sound effects
 
 - `controls` --> adds play/pause/volume buttons to the player
 
 - `<source>` --> defines audio file and type (multiple sources = better browser support)
-type="audio/mpeg" --> for .mp3 files
-type="audio/ogg" --> for .ogg files
+  type="audio/mpeg" --> for .mp3 files
+  type="audio/ogg" --> for .ogg files
 
 - for example: `<audio controls><source src="audio.mp3" type="audio/mpeg"><source src="audio.ogg" type="audio/ogg">Your browser does not support the audio element.</audio>`
 
 - fallback content --> text between `<audio>` or `<video>` tags → shown only if browser does not support the media tag or format
-not shown if at least one `<source>` is playable
+  not shown if at least one `<source>` is playable
 
 #### How to embed youtube video using iframe
 
@@ -228,4 +268,18 @@ not shown if at least one `<source>` is playable
 - YouTube provides the `<iframe>` code → go to video → click Share → click Embed → copy the code
 - for example : `<iframe width="560" height="315" src="https://www.youtube.com/embed/z_k5keq1qKs?si=vIi5Ffsx-USsVDF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>` --> this code was provided by youtube.
 
+---
 
+#### data-\* attribute:
+
+- Used to store custom data in HTML
+- Syntax: data-key="value"
+- Accessible in JavaScript using element.dataset.key
+- Key in JS is written in camelCase (e.g. data-user-id → dataset.userId)
+
+- Example:
+  `<button data-user-id="101" data-role="moderator">Click Me</button>`
+
+- JS:
+  element.dataset.userId → "101"
+  element.dataset.role → "moderator"

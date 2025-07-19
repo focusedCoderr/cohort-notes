@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audio Player Example</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Audio Player Example</title>
+	</head>
+	<body>
+		<form action="/submit" method="post">
+			<label for="userEmail">Please enter your email</label><br /><br />
+			<input
+				type="email"
+				id="userEmail"
+				name="userEmail"
+				placeholder="abc@def.com"
+				required
+			/><br /><br />
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/z_k5keq1qKs?si=vIi5Ffsx-USsVDF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
-</body>
+			<label for="userDob">Please enter your DOB</label><br /><br />
+			<input
+				type="date"
+				id="userDob"
+				name="userDob"
+				placeholder="dd/mm/yyyy"
+				required
+			/><br /><br />
+
+			<label for="userColor">Please enter your fav color</label><br /><br />
+			<input type="color" id="userColor" name="userColor" /><br /><br />
+		</form>
+	</body>
 </html>
