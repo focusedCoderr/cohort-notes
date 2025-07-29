@@ -44,7 +44,17 @@
 now the item2 will occupy twice the size on the screen as compared to other children. flex always signifies the ratio.
 If flex is not defined for the elements having class 'child', and flex:2 (2 or anything >0) is defined for #item2, then item 2 occupies all the remaining space.
 
-- order:
-- flex-direction
+- order: used on child element. By default order of each element is 0 -> basically means priority -> value can be a negative integer, 0 or positive integer. lower the value -> more priority the element has -> elements laid out on the axis (main or cross) based on their priority -> lower order value element -> laid out first, then higher, higher , ...highest.
+
+
+- flex-direction: defined on parent -> value can be row, row-reverse, column, column-reverse -> whatever the value of flex-direction is -> that direction becomes the main axis
+	- for example: let us say flex-direction is :
+		1. row -> main axis -> left to right | cross axis -> top to bottom
+		2. row-reverse -> main axis -> right to left | cross axis -> top to bottom
+		3. column -> main axis -> top to bottom | cross axis -> left to right
+		4. column-reverse -> main axis -> bottom to top | cross-axis -> left to right
 - align-self
 - align-content???
+- flex-flow: flex-direction flex-wrap : ??
+- align-content: ??
+- 
