@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			div {
+				border: 2px solid grey;
+				height: 500px;
+				padding: 20px;
+			}
+			.parent {
+				display: flex;
+				justify-content: start;
+				align-items: start;
+				gap: 20px 20px;
+				flex-wrap: wrap;
+			}
+			.child {
+				height: 200px;
+				/* flex: 2; */
+				width: 200px;
+			}
+
+			#item2 {
+				flex: -1;
+			}
+		</style>
+	</head>
+	<body style="color: grey; background-color: black">
+		<div class="parent">
+			<div class="child">Item 1</div>
+			<div class="child" id="item2">Item 2</div>
+			<div class="child">Item 3</div>
+			<div class="child">Item 4</div>
+		</div>
+	</body>
+</html>
