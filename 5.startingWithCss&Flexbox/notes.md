@@ -48,22 +48,27 @@
   <br>
 - `flex-wrap` -> used in parent to enable or prevent wrapping of children to the next line
   <br>
-- `flex` -> defined in children -> defines ratio of children w.r.t. each other ->
+- `flex` -> defined on the child elements -> basically it defines how the size of a child element varies with respect to the size of other child elements in the same flexbox -> it defines how much an element can increase or decrease its size if there is sufficient space or limited space -> shorthand for three properties -> `flex: flex-grow flex-shrink flex-basis` :
 
-```html
-<style>
-	.child {
-		flex: 1;
-	}
-	#item2 {
-		flex: 2;
-	}
-</style>
-```
+  - flex-grow
+  - flex-shrink
+  - flex-basis
 
-now the item2 will occupy twice the size on the screen as compared to other children. flex always signifies the ratio.
-If flex is not defined for the elements having class 'child', and flex:2 (2 or anything >0) is defined for #item2, then item 2 occupies all the remaining space.
-<br>
+    - `flex-grow`: defines how much a child element can grow in size with respect to other child elements if there is space available to grow.
+      - `flex-grow : 1` -> means the child element can grow if the space is available
+      - `flex-grow: 2 or above` -> means the child element will grow in the ratio of this value
+      - `flex-grow: 0` -> this is default value of all items if flex is not defined -> this means that by default the child elements will not grow even if there is space available.
+    - `flex-shrink`: defines how much a child element shrink in size if space becomes lesser
+      - `flex-shrink: 1` -> means child element can shrink if space becomes lesser
+      - `flex-shrink: 2 or more` -> means the child element will shrink with a factor of 2 or whatever the value is if space becomes lesser -> keep in mind this value always apply in ratio -> for eg. : if there are two child elements in the flexbox and one has a shrink value of 1 and the other has a shrink value of 3 -> this means that the second child elements will shrink thrice as fast as the first element.
+      - `flex-shrink: 1` -> default value if flex is not defined -> it means that by default the items in the flexbox will shrink if space becomes a constraint
+    - `flex-basis` : it defines that, before applying the grow and shrink values, what should be the size of the child element
+      - `flex-basis: 0` : this means that before applying the shrink and grow values, the size is to be considered zero no matter what the content size is of the child element
+      - `flex-basis: auto`: this means that before applying grow and shrink values, the size of the child element is according to the content inside the child element.
+      - `flex-basis: auto` : This is the default value if flex is not defined on the element
+
+  - Now, that we have have understood what all these values mean, if it is written that `flex: 1` this means : `flex: 1 1 auto` -> all the default values are put if not given  
+    <br>
 
 - order: used on child element. By default order of each element is 0 -> basically means priority -> value can be a negative integer, 0 or positive integer. lower the value -> more priority the element has -> elements laid out on the axis (main or cross) based on their priority -> lower order value element -> laid out first, then higher, higher , ...highest.
   <br>
