@@ -29,6 +29,24 @@
 - `grid-column-start: 5` and `grid-column-end : 3` -> this is also valid. This just means that the item will be placed in two columns.
 - `grid-column-start: 2` and `grid-column-end: span 2` -> this means that the item will be placed in two columns
 
+
+
+- `grid-row-start : 1` -> specifies that the item will be placed from the first grid row line.
+- `grid-row-end: 4` -> specifies that the item will end at the 4th row line
+- `grid-row-start: 4` and `grid-row-end : 2` -> this is also valid. This just means that the item will be placed in two rows.
+- `grid-row-start: 2` and `grid-row-end: span 2` -> this means that the item will be placed in two rows
+
+#### Shorthands
+
+- `grid-row: grid-row-start / grid-row-end` -> for eg. : if I have to place item from second to fourth row -> `grid-row: 2 / 5` or `grid-row: 2/ span 3`
+
+Similarly
+
+- `grid-column: grid-column-start / grid-column-end` -> for eg. : if I have to place item from first to fourth column -> `grid-row: 1 / span 4`
+
+Now instead of writing separate `grid-row` and `grid-column` -> there is a shorthand for this as well:
+
+- `grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end` -> for eg. : In a grid having 5 rows and 6 columns, if we have to place the item in the last row and last column: `grid-area: 5 / 6 / 6 / 7`
 ## item-level
 
 - grid-column-start:
