@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
-			.parent {
+			/* .parent {
 				height: 500px;
 				border: 2px solid;
 				display: grid;
@@ -22,16 +22,76 @@
 
 			#item4 {
 				grid-area: 4 / 1 / 5 / 6;
+			} */
+			/* 
+			#item {
+				box-sizing: content-box;
+				height: 100px;
+				padding: 20px;
+				margin: 20px;
+				border: 5px solid;
+			}
+			.container {
+				border: 1px solid;
+				display: grid;
+				grid-template-areas:
+					"h h h"
+					"c c a"
+					"c c a"
+					"f f f";
+			}
+
+			.areaItems {
+				border: 1px dashed;
+			}
+
+			.header {
+				grid-area: h;
+			}
+			.ads {
+				grid-area: a;
+			}
+			.content {
+				grid-area: c;
+			}
+			.footer {
+				grid-area: f;
+			} */
+
+			.relative-positioned {
+				position: relative;
+				width: 500px;
+				height: 500px;
+				border: 1px solid;
+			}
+			.absolute-positioned {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				bottom: 0px;
+				right: 0px;
+				border: 1px dashed;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="parent">
+		<!-- <div class="parent">
 			<div class="child">Item 1</div>
 			<div class="child">Item 2</div>
 			<div class="child">Item 3</div>
 			<div class="child" id="item4">Item 4</div>
 			<div class="child" id="item5">Item 5</div>
+		</div> -->
+
+		<!-- <div class="container">
+			<div class="header areaItems">Header</div>
+			<div class="ads areaItems">Ads</div>
+			<div class="content areaItems">Content</div>
+			<div class="footer areaItems">Footer</div>
+		</div> -->
+
+		<div class="relative-positioned">
+			<div class="absolute-positioned">I am absolutely absolute-positioned</div>
 		</div>
 	</body>
 </html>
