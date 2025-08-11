@@ -21,3 +21,7 @@
   ```
 - `cursor: pointer` -> used a lot of times
 - `nav div button:hover{}` : to define what happens when you hover over a button
+- `object-fit: cover` : study this
+- `section` tag : understand.
+- understand media queries
+-
