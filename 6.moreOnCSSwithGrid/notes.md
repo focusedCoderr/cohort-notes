@@ -13,7 +13,7 @@
 - `grid-template-columns: 20% 20% 20% 20% 20%` -> creates grid of 5 columns which will occupy 20% of the available area each.
 - `grid-template-columns: 100px 100px 100px 100px 100px` -> creates grid of 5 columns which will occupy 100 px each.
 - `grid-template-columns: 20% 100px 30% 100px 100px` -> we can use any combination of px, %, em etc to assign the amount of space to be used by each column
-- `grid-template-columns: repeat(100, 5%)` -> will create a grid which will have 100 columns, wach of which will occupy 5% of the available space.
+- `grid-template-columns: repeat(100, 5%)` -> will create a grid which will have 100 columns, each of which will occupy 5% of the available space.
 
 ### Defining Rows:
 
