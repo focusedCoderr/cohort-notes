@@ -12,4 +12,20 @@ function checkIfFailOrPass(marks) {
 	return grade;
 }
 
-console.log(checkIfFailOrPass(90));
+// console.log(checkIfFailOrPass(90));
+
+const fruits = ["firstItem", "secondItem"];
+const obj = {
+	firstkey: "firstValue",
+	secondKey: 123,
+	anotherKey: true,
+};
+let gaurav;
+console.log(typeof null); // object
+console.log(typeof "Hello"); // string
+console.log(typeof 123); // number
+console.log(typeof true); // boolean
+console.log(typeof gaurav); // undefined
+console.log(typeof fruits); // object
+console.log(typeof obj); // object
+console.log(typeof checkIfFailOrPass);
