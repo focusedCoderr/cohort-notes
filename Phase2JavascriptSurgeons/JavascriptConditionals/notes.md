@@ -70,6 +70,12 @@ if (condition) {
 
 ## Loops
 
+- `for loop`
+
+```javascript
+for(let i=0; condition; loop counter){
+  //do something
+}
 ```
 
-```
+buffer website for css
