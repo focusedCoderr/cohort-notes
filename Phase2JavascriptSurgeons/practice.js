@@ -30,19 +30,25 @@ const obj = {
 // console.log(typeof obj); // object
 // console.log(typeof checkIfFailOrPass);
 
-const teas = ["Green tea", "Black Tea", "Oolong Tea", "White tea", "Herbal Tea"];
+const teas = [
+	"Green tea",
+	"Black Tea",
+	"Oolong Tea",
+	"White tea",
+	"Herbal Tea",
+];
 teas.push("Chamomile Tea");
 console.log(teas);
 
 const indexofOolong = teas.indexOf("Oolong Tea");
 console.log(indexofOolong);
 
-teas.splice(indexofOolong,1);
+teas.splice(indexofOolong, 1);
 console.log(teas);
 
-
-
-console.log(teas.reduce((acc, curr)=>curr!="Herbal Tea" ?  acc++: acc, 0));
+console.log(
+	teas.reduce((acc, curr) => (curr != "Herbal Tea" ? acc++ : acc), 0)
+);
 // console.log(teas.reduce((acc, curr)=>{
 // 	if(curr!="Herbal Tea"){
 // 		acc++;
@@ -54,14 +60,37 @@ console.log(teas.map((curr) => curr.toUpperCase()));
 
 const initial = {
 	maxCount: 0,
-	item: ""
-}
+	item: "",
+};
 
-console.log(teas.reduce((acc, curr)=>{
-	let lengtho = curr.length;
-	if(lengtho>acc.maxCount){
-		acc.maxCount = lengtho;
-		acc.item = curr
-	}
-	return acc;
-},initial));
+console.log(
+	teas.reduce((acc, curr) => {
+		let lengtho = curr.length;
+		if (lengtho > acc.maxCount) {
+			acc.maxCount = lengtho;
+			acc.item = curr;
+		}
+		return acc;
+	}, initial)
+);
+
+let i = 122;
+console.log(i + 100);
+
+const person = {
+	firstName: "Gaurav",
+	lastName: "Yadav",
+	hobbies: ["listening Sitar", "identifying perfumes", "filing RTIs"],
+	isMarried: true,
+	getFullName: function () {
+		return "Gaurav Yadav";
+	},
+
+	address: {
+		hno: 1,
+		street: 1,
+		countryCode: "IN",
+	},
+};
+
+console.log(person.hasPatience);

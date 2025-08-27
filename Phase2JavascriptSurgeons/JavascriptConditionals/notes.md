@@ -79,3 +79,32 @@ for(let i=0; condition; loop counter){
 ```
 
 buffer website for css
+
+## Data Structure in JS
+
+- Primitive: comes out of the box in js like arrays and objects
+- Non-Primitive: We have to write implementation of these like stacks. they don't come out of the box in js.
+- Note: Don't confuse with data types. Use chatgpt and research the difference between the two.
+
+### Objects:
+
+- defined in curly braces:
+
+```js
+const person = {
+  firstName: "Gaurav",
+  lastName: "Yadav",
+  hobbies: ["listening Sitar", "identifying perfumes", "filing RTIs"],
+  isMarried: true,
+  getFullName: function(){
+    return this.firstName + this.lastName;
+  }
+
+  address: {
+    hno:1,
+    street:1,
+    countryCode: "IN",
+
+  }
+}
+```
