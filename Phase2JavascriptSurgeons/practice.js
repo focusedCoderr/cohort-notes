@@ -38,17 +38,17 @@ const teas = [
 	"Herbal Tea",
 ];
 teas.push("Chamomile Tea");
-console.log(teas);
+// console.log(teas);
 
 const indexofOolong = teas.indexOf("Oolong Tea");
-console.log(indexofOolong);
+// console.log(indexofOolong);
 
 teas.splice(indexofOolong, 1);
-console.log(teas);
+// console.log(teas);
 
-console.log(
-	teas.reduce((acc, curr) => (curr != "Herbal Tea" ? acc++ : acc), 0)
-);
+// console.log(
+// 	teas.reduce((acc, curr) => (curr != "Herbal Tea" ? acc++ : acc), 0)
+// );
 // console.log(teas.reduce((acc, curr)=>{
 // 	if(curr!="Herbal Tea"){
 // 		acc++;
@@ -56,26 +56,26 @@ console.log(
 // 	return acc;
 // },0));
 
-console.log(teas.map((curr) => curr.toUpperCase()));
+// console.log(teas.map((curr) => curr.toUpperCase()));
 
 const initial = {
 	maxCount: 0,
 	item: "",
 };
 
-console.log(
-	teas.reduce((acc, curr) => {
-		let lengtho = curr.length;
-		if (lengtho > acc.maxCount) {
-			acc.maxCount = lengtho;
-			acc.item = curr;
-		}
-		return acc;
-	}, initial)
-);
+// console.log(
+// 	teas.reduce((acc, curr) => {
+// 		let lengtho = curr.length;
+// 		if (lengtho > acc.maxCount) {
+// 			acc.maxCount = lengtho;
+// 			acc.item = curr;
+// 		}
+// 		return acc;
+// 	}, initial)
+// );
 
 let i = 122;
-console.log(i + 100);
+// console.log(i + 100);
 
 const person = {
 	firstName: "Gaurav",
@@ -93,4 +93,59 @@ const person = {
 	},
 };
 
-console.log(person.hasPatience);
+// console.log(person.hasPatience);
+
+const p1 = {
+	fname: "Sandesh",
+};
+
+let aname = "Gaurav";
+let bname = aname;
+
+console.log(bname); // Gaurav
+console.log(aname); // Gaurav
+
+bname = "Sandesh";
+
+console.log(bname); // Sandesh
+console.log(aname); // Gaurav
+
+// let anObject = {
+// 	name: "Gaurav"
+// }
+
+// let anotherObject = anObject;
+
+// console.log(anotherObject); // {name: "Gaurav"}
+// console.log(anObject); // {name: "Gaurav"}
+
+// anotherObject.name = "Sandesh";
+
+// console.log(anotherObject); // {name: "Sandesh"}
+// console.log(anObject); // {name: "Sandesh"}
+
+const obj1 = {
+	a: 2,
+	b: "b",
+	c: true,
+};
+
+const obj2 = {
+	...obj1,
+};
+
+const obj3 = {
+	a: "This is value for key a",
+	b: 2,
+	c: true,
+	d: {
+		e: "This is value for key e",
+		f: "This is value for key f",
+	},
+};
+const obj4 = { ...obj3 };
+
+console.log(obj1);
+console.log(obj2);
+console.log(obj3);
+console.log(obj4);
