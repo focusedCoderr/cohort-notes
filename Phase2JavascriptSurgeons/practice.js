@@ -102,24 +102,24 @@ const p1 = {
 let aname = "Gaurav";
 let bname = aname;
 
-console.log(bname); // Gaurav
-console.log(aname); // Gaurav
+// console.log(bname); // Gaurav
+// console.log(aname); // Gaurav
 
 bname = "Sandesh";
 
-console.log(bname); // Sandesh
-console.log(aname); // Gaurav
+// console.log(bname); // Sandesh
+// console.log(aname); // Gaurav
 
-// let anObject = {
-// 	name: "Gaurav"
-// }
+let anObject = {
+	name: "Gaurav",
+};
 
-// let anotherObject = anObject;
+let anotherObject = anObject;
 
 // console.log(anotherObject); // {name: "Gaurav"}
 // console.log(anObject); // {name: "Gaurav"}
 
-// anotherObject.name = "Sandesh";
+anotherObject.name = "Sandesh";
 
 // console.log(anotherObject); // {name: "Sandesh"}
 // console.log(anObject); // {name: "Sandesh"}
@@ -135,17 +135,32 @@ const obj2 = {
 };
 
 const obj3 = {
-	a: "This is value for key a",
+	a: "A",
 	b: 2,
 	c: true,
 	d: {
-		e: "This is value for key e",
-		f: "This is value for key f",
+		e: "E",
+		f: "F",
 	},
 };
+
+// console.log(JSON.stringify(obj3));
+
 const obj4 = { ...obj3 };
 
-console.log(obj1);
-console.log(obj2);
-console.log(obj3);
-console.log(obj4);
+// console.log(obj1);
+// console.log(obj2);
+// console.log(obj3);
+// console.log(obj4);
+
+const normalTea = {
+	name: "Chai",
+	"type of tea": "caffeniated",
+	caffeineContent: 30,
+};
+
+console.log(normalTea.name);
+console.log(normalTea["type of tea"]);
+
+normalTea.origin = "India";
+normalTea.caffeineContent = "Medium";
