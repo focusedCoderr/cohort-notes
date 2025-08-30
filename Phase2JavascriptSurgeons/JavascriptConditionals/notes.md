@@ -103,7 +103,10 @@ buffer website for css
 
 ### Objects:
 
-- defined in curly braces:
+- defined in curly braces: `const obj1 = {a:"A", b:2,c: false}` : called object literal
+- can also be defined as : `const obj2 = new Object({a:"A", b:2,c: false})`
+
+#### Two ways of accessing properties in the object:
 
 ```js
 const person = {
@@ -123,6 +126,91 @@ const person = {
   }
 }
 ```
+
+- In the above example : if firstName is to be printed: `console.log(person.firstName)` i.e. propertied can be accessed using dot operator
+- another way is : `console.log(person["hobbies"])` i.e. `objectName["propertyname"]` . This way is used when there is space or starts with a number or has special character other than `_ and $`
+- Bracket syntax is also used when keyName is dynamic.
+
+#### How to delete a property from the object: Interview Question
+
+- `delete` operator is used to delete a property from the object
+- `delete person.isMarried` : will delete the `isMarried` property from the object
+
+#### for .. in loop
+
+- Used for looping through object properties.
+
+```js
+const anObject = {
+	a: "A",
+	b: 22,
+	c: true,
+	d: {
+		e: "E",
+		f: "F",
+	},
+};
+
+for (let key in anObject) {
+	console.log(anObject[key]);
+}
+```
+
+- Output:
+
+```js
+A
+22
+true
+{ e: 'E', f: 'F' }
+```
+
+#### Static Methods vs Instance Methods:
+
+- Static methods are called on the class itself, not on the objects created from the class.
+- Instance methods are aclled on the instances (objects) of the class, not on the class directly.
+
+#### Object.values(anObject) (Static Method):
+
+- returns an array of values of the keys of the object
+  `[ 'A', 22, true, { e: 'E', f: 'F' } ]`
+
+#### Object.entries(anObject) (Static Method):
+
+- returns an array of key value pairs on the object. Each array consists of key (string) at the first position and value at the second location.
+
+```js
+[
+	["a", "A"],
+	["b", 22],
+	["c", true],
+	["d", { e: "E", f: "F" }],
+];
+```
+
+#### hasOwnProperty(prop) (Instance Method):
+
+- returns true or false based on whether the object on which it is called has the `prop` property
+- `prop` is the string name of the property to test
+
+#### Another way to check whether a particular property is present in the object:
+
+```js
+const pen = {
+	name: "Reynolds",
+	color: "Black",
+	make: "Plastic",
+	price: 25,
+};
+```
+
+- check whether `pen` object has the `make` property
+- `console.log(pen.hasOwnProperty("make"))`
+- `console.log("make" in pen)`
+- Both return true
+- `in` operator checks for the property anywhere in the prototype chain, while `hasOwnProperty` checks only in the object itself
+- One more way to check this : `console.log(pen.make!== undefined)`
+- This fails when the value of the property has been explicitly set to `undefined`
 
 #### Stack Memory vs Heap Memory
 
@@ -259,3 +347,5 @@ const obj4 = { ...obj3 };
 - This can be a problem in C programming language, but not in javascript because, the engine is smart enough, while using `JSON.stringify()` method, whenever the engine encounters a reference, it works recursively and the pointer gets resolved to the actual value and that value is stored in the string. This is the way deep copy works.
 
 - Garbage collector : When the scope of variables run out and actually there is no pointer pointing towards an object in the heap, then that object needs to be cleared from the heap memory. This is the job of garbage collector. In javascipt we do not have to worry about garbage collection because it is done by the engine itself.
+
+- NOTE: come back at 24:16 in machine coding on Prototypes
