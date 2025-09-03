@@ -2,12 +2,89 @@
 
 ## How to write functions in Javascript:
 
-- One way:
+### One way:
 
 ```javascript
 function functionName(parameter) {
 	console.log(`Hello World ${parameter}`);
 }
+
+const functionName = function (parameter) {
+	console.log(`Hello World ${parameter}`);
+};
+```
+
+### Another way: Arrow Functions:
+
+```js
+(param1, param2) => {
+	console.log(`${param1} and ${param2}`);
+};
+```
+
+- if there is only one statement in the arrow function and that is a return statement, then there is no need of braces and no need to write `return` as well.
+
+```js
+let a = 2;
+let b = 4;
+const add = (x, y) => x + y;
+let callAdd = add(a, b);
+console.log(callAdd);
+
+Output: 6;
+```
+
+- `this` is not available in arrow functions
+- `arguments` is also not available in arrow functions
+- This is another way of defining functions.<br><br>
+
+- One thing to note is, even if we do not define parameters in our function definition, if a user passes any argument, they are collected in an array like `arguments` variable. This is not array but array-like object. We can use for loop on it. It has a property `length` as well.
+- So,
+
+```js
+  const printYourName =  function(){
+    console.log(`Hi, my name is ${arguments[0]}`);
+  }
+
+  printMyName("Gaurav");
+
+Output:
+Hi, my name is Gaurav
+```
+
+- But this `arguments` object is not available in arrow functions. So, a better way is to use the `rest parameter`
+
+### rest parameter : ...parameterNameYouLike
+
+- It can be used in both array function definition and regular function definition.
+- It is actually an array and not array-like object. So we can use all the methods of array on it like forEach, map etc.
+- Basically it collects all the arguments passed to the function.
+- It is always the last parameter, function cannot accept any other parameter after this
+
+```js
+  const printOurName =  function(...names){
+    names.forEach((name)=>{
+      console.log(`Hello my name is ${name}`);
+    });
+
+  }
+
+  const names = ["ASYadav", "Suman Yadav", "Surender Singh", "Santosh Yadav", "Anita Yadav", "Chanderbhan Yadav"];
+  printOurName("Gaurav", "Sandesh", "Divya", "Aakash", "Sumit", "Neetu", ...names);
+
+Output:
+Hello my name is Gaurav
+Hello my name is Sandesh
+Hello my name is Divya
+Hello my name is Aakash
+Hello my name is Sumit
+Hello my name is Neetu
+Hello my name is ASYadav
+Hello my name is Suman Yadav
+Hello my name is Surender Singh
+Hello my name is Santosh Yadav
+Hello my name is Anita Yadav
+Hello my name is Chanderbhan Yadav
 ```
 
 ## Defining Variables
@@ -212,6 +289,43 @@ const pen = {
 - One more way to check this : `console.log(pen.make!== undefined)`
 - This fails when the value of the property has been explicitly set to `undefined`
 
+#### Merge two objects into one : Use of spread operator:
+
+```js
+const oneTea = {
+	name: "Green Tea",
+	type: "Caffeniated",
+	origin: "China",
+	like: false,
+	anew: "hell",
+};
+
+const anotherTea = {
+	name: "Badam Tea",
+	type: "Non-Caffeniated",
+	origin: "Rewari",
+	like: true,
+	sys: "sterk",
+};
+
+const oneObject = { ...oneTea, ...anotherTea };
+
+console.log(oneObject);
+
+Output:
+
+{
+  name: 'Badam Tea',
+  type: 'Non-Caffeniated',
+  origin: 'Rewari',
+  like: true,
+  anew: 'hell',
+  sys: 'sterk'
+}
+```
+
+- When two objects have common keys, then the value of first object get overwritten by the values of second object, all the unique keys properties are added to the merged object.
+
 #### Stack Memory vs Heap Memory
 
 - Whenever variables are created, they are stored in memory. The memory model has two main parts:
@@ -349,3 +463,10 @@ const obj4 = { ...obj3 };
 - Garbage collector : When the scope of variables run out and actually there is no pointer pointing towards an object in the heap, then that object needs to be cleared from the heap memory. This is the job of garbage collector. In javascipt we do not have to worry about garbage collection because it is done by the engine itself.
 
 - NOTE: come back at 24:16 in machine coding on Prototypes
+- Blog on 1:39:00 - JS Objects and Prototypes
+
+- ## DOM: Document Object Model
+
+- Blog: Events in dom, what they do, what type of events are there, funny take on events connecting them to day to day life, if possible, abalogies of click event, dbl clkick event, browser resizing, mouse position kahan pe hai
+
+- Assignment: 2:07:00
