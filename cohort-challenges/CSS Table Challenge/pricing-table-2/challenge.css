@@ -1,106 +1,206 @@
 /* Challenge CSS */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #1a1a1a;
 }
 
+.disabled {
+	color: #5f5f5f;
+}
 .container {
-  /* Add your styles here */
+	/* Add your styles here */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
 .header {
-  /* Add your styles here */
+	/* Add your styles here */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 h1 {
-  /* Add your styles here */
+	/* Add your styles here */
+	color: #ff6b6b;
 }
 
 .subtitle {
-  /* Add your styles here */
+	/* Add your styles here */
+	color: #7f7f7f;
 }
 
 .pricing-container {
-  /* Add your styles here */
+	/* Add your styles here */
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+	/* border: 1px solid white; */
 }
 
 .pricing-card {
-  /* Add your styles here */
+	/* Add your styles here */
+	color: white;
+	width: 25%;
+	/* border: 1px solid white; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 16px;
+	/* height: 60vh; */
+	padding: 2em 2em;
+	border-radius: 1em;
+	gap: 2em;
 }
 
 .pricing-card:hover {
-  /* Add your styles here */
+	/* Add your styles here */
 }
 
 .card-header {
-  /* Add your styles here */
+	/* Add your styles here */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.2em;
 }
 
+.card-header h2 {
+	font-size: 1.4em;
+}
 .icon {
-  /* Add your styles here */
+	/* Add your styles here */
+	font-size: 2.5em;
+}
+
+.popular {
+	position: relative;
+	top: 0px;
 }
 
 .popular-tag {
-  /* Add your styles here */
+	/* Add your styles here */
+	position: absolute;
+	top: -12px;
+	background-color: #ffd93d;
+	color: #1d1d1a;
+	font-size: 0.5em;
+	font-weight: 800;
+	padding: 5px 20px;
+	border-radius: 15px;
 }
 
 .price-block {
-  /* Add your styles here */
+	/* Add your styles here */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #303030;
+	padding: 1em 0em;
+	width: 100%;
+	border-radius: 0.7em;
 }
 
 .price {
-  /* Add your styles here */
+	/* Add your styles here */
+	color: #ff6b6b;
+	font-size: 2em;
+	font-weight: 700;
 }
 
 .period {
-  /* Add your styles here */
+	/* Add your styles here */
+	text-transform: uppercase;
+	color: #5f5f5f;
+	font-size: 0.7em;
+	font-weight: 600;
 }
 
 .features {
-  /* Add your styles here */
+	/* Add your styles here */
+	list-style: none;
+	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 1.8em;
 }
 
 .features li {
-  /* Add your styles here */
+	/* Add your styles here */
+	font-size: 1em;
 }
 
 .features li.disabled {
-  /* Add your styles here */
+	/* Add your styles here */
 }
 
 .join-btn {
-  /* Add your styles here */
+	/* Add your styles here */
+	width: 100%;
+	background-color: transparent;
+	color: #ff6b6b;
+	font-size: 1.2em;
+	box-shadow: none;
+	border: 1px solid #ff6b6b;
+	padding: 10px;
+	border-radius: 0.7em;
 }
 
 .join-btn:hover {
-  /* Add your styles here */
+	/* Add your styles here */
 }
 
 /* Custom Class Modifiers */
+
+.beginner {
+	background-color: #262626;
+}
 .warrior {
-  /* Add your styles here */
+	/* Add your styles here */
+	background-color: #312222;
+	border: 1.5px solid #ff6b6b;
+}
+
+.warrior .price-block {
+	/* Add your styles here */
+	background-color: #3c2d2d;
 }
 
 .champion {
-  /* Add your styles here */
+	/* Add your styles here */
+	background-color: #312d1d;
+	border: 1.5px solid #efcc3a;
+}
+
+.champion .price-block {
+	/* Add your styles here */
+	background-color: #3c3829;
 }
 
 .champion .price {
-  /* Add your styles here */
+	/* Add your styles here */
+	color: #ffd93d;
 }
 
 .champion .join-btn {
-  /* Add your styles here */
+	/* Add your styles here */
+	color: #ffd93d;
+	border: 1.5px solid #ffd93d;
 }
 
 .champion .join-btn:hover {
-  /* Add your styles here */
+	/* Add your styles here */
 }

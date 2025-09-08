@@ -100,7 +100,7 @@
 
 - `<input type="text" name="brand">` --> name attribute is very important --> if you want to send the data of the input field to the backend --> you need name attribute --> the data is sent in key value pair and here the key is "brand" and value will be the data which user enters. --> If you don't give name attribute, the data of that field would not be sent because the key would be missing.
 
-- `<label for="brandname>Enter the name of the brand</label>
+- `<label for="brandname">Enter the name of the brand</label>
 <input type="text" name="brand" id="brandname">`
 
 - label is used to define what the input field is used for. its "for" attribute's value is the id of the element for which this label element is used.

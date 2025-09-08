@@ -202,7 +202,7 @@ Suppose:
 
   - nearest <i>positioned</i> ancestor, instead of
   - viewport
-  - use
+  - use case:
 
     ```html
     <div class="relative-positioned">

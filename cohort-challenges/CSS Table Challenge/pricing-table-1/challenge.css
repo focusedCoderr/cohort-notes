@@ -17,10 +17,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
-	height: 90vh;
-	width: 100%;
-	border: 1px solid red;
+	justify-content: center;
+	gap: 70px;
+	width: 90%;
+	/* border: 1px solid red; */
+	margin: auto;
+	padding: 100px 10px;
 }
 
 h1 {
@@ -35,25 +37,36 @@ h1 {
 .pricing-container {
 	/* Add your styles here */
 	display: flex;
-	width: 80%;
-	height: 60%;
-	border: 1px solid white;
-	justify-content: space-around;
+	width: 90%;
+	/* height: 100%; */
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+	/* border: 1px solid red; */
 }
 
 .pricing-card {
 	/* Add your styles here */
-	border: 1px solid red;
+	position: relative;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 22.4%;
+	width: 27%;
 	font-size: 16px;
 	justify-content: space-around;
+	padding: 25px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0px 0px 30px -20px #7a7573;
+
+	margin: 10px;
+	/* height: 100%; */
 }
 
 .pricing-card:hover {
 	/* Add your styles here */
+	border: 1.5px solid #ff9533;
 }
 
 .pricing-card.popular {
@@ -62,6 +75,13 @@ h1 {
 
 .popular-badge {
 	/* Add your styles here */
+	position: absolute;
+	display: inline;
+	padding: 5px 15px;
+	background-color: #ff7800;
+	border-radius: 15px;
+	top: -17px;
+	color: white;
 }
 
 .price {
@@ -79,16 +99,18 @@ h1 {
 .features {
 	/* Add your styles here */
 	list-style: none;
+	/* list-style-position: inside; */
+	padding-left: 30px;
 }
 
 .features li {
 	/* Add your styles here */
-	padding-left: 20px;
+	/* padding-left: 20px; */
 	text-align: center;
 }
 
 .features li::marker {
-	content: "☕  ";
+	content: "☕";
 	/* color: #ff9533; */
 	font-size: 20px;
 }
@@ -103,4 +125,501 @@ h1 {
 
 .subscribe-btn:hover {
 	/* Add your styles here */
+}
+
+@media (min-width: 0px) and (max-width: 320px) {
+	.container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 70px;
+		width: 90%;
+		border: none;
+		margin: auto;
+		padding: 100px 10px;
+	}
+
+	h1 {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 25px;
+		gap: 10px;
+	}
+
+	.pricing-container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		/* height: 100%; */
+		justify-content: space-between;
+		/* flex-wrap: wrap; */
+		margin-bottom: 100px;
+		border: none;
+		gap: 50px;
+	}
+
+	.pricing-card {
+		/* Add your styles here */
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		font-size: 13px;
+		justify-content: space-around;
+		padding: 50px 5px;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 30px -20px #7a7573;
+		gap: 10px;
+
+		/* margin: 10px; */
+		/* height: 100%; */
+	}
+
+	.pricing-card:hover {
+		/* Add your styles here */
+		border: 1.5px solid #ff9533;
+	}
+
+	.pricing-card.popular {
+		/* Add your styles here */
+	}
+
+	.popular-badge {
+		/* Add your styles here */
+		position: absolute;
+		display: inline;
+		padding: 5px 15px;
+		background-color: #ff7800;
+		border-radius: 15px;
+		top: -17px;
+		color: white;
+	}
+
+	.price {
+		/* Add your styles here */
+		font-weight: bold;
+		font-size: 2em;
+	}
+
+	.period {
+		/* Add your styles here */
+		font-size: 0.8em;
+		color: #7a7573;
+	}
+
+	.features {
+		/* Add your styles here */
+		list-style: none;
+		/* list-style-position: inside; */
+		/* padding-left: 30px; */
+	}
+
+	.features li {
+		/* Add your styles here */
+		/* padding-left: 20px; */
+		text-align: center;
+	}
+
+	.features li::marker {
+		content: "☕";
+		/* color: #ff9533; */
+		font-size: 15px;
+	}
+	.subscribe-btn {
+		/* Add your styles here */
+		border-radius: 20px;
+		padding: 7px 17px;
+		background-color: #ff9533;
+		border: none;
+		font-weight: 500;
+		margin-top: 10px;
+	}
+
+	.subscribe-btn:hover {
+		/* Add your styles here */
+	}
+}
+
+@media (min-width: 321px) and (max-width: 520px) {
+	.container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 70px;
+		width: 90%;
+		border: none;
+		margin: auto;
+		padding: 100px 10px;
+	}
+
+	h1 {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 30px;
+		gap: 10px;
+	}
+
+	.pricing-container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		/* height: 100%; */
+		justify-content: space-between;
+		/* flex-wrap: wrap; */
+		margin-bottom: 100px;
+		border: none;
+		gap: 50px;
+		align-items: center;
+	}
+
+	.pricing-card {
+		/* Add your styles here */
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		font-size: 14px;
+		justify-content: space-around;
+		padding: 50px 15px;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 30px -20px #7a7573;
+		gap: 10px;
+
+		/* margin: 10px; */
+		height: 400px;
+	}
+
+	.pricing-card:hover {
+		/* Add your styles here */
+		border: 1.5px solid #ff9533;
+	}
+
+	.pricing-card.popular {
+		/* Add your styles here */
+	}
+
+	.popular-badge {
+		/* Add your styles here */
+		position: absolute;
+		display: inline;
+		padding: 5px 15px;
+		background-color: #ff7800;
+		border-radius: 15px;
+		top: -17px;
+		color: white;
+	}
+
+	.price {
+		/* Add your styles here */
+		font-weight: bold;
+		font-size: 2em;
+	}
+
+	.period {
+		/* Add your styles here */
+		font-size: 0.8em;
+		color: #7a7573;
+	}
+
+	.features {
+		/* Add your styles here */
+		list-style: none;
+		/* list-style-position: inside; */
+		/* padding-left: 30px; */
+	}
+
+	.features li {
+		/* Add your styles here */
+		/* padding-left: 20px; */
+		text-align: center;
+	}
+
+	.features li::marker {
+		content: "☕";
+		/* color: #ff9533; */
+		font-size: 15px;
+	}
+	.subscribe-btn {
+		/* Add your styles here */
+		border-radius: 20px;
+		padding: 7px 17px;
+		background-color: #ff9533;
+		border: none;
+		font-weight: 500;
+		margin-top: 10px;
+	}
+
+	.subscribe-btn:hover {
+		/* Add your styles here */
+	}
+}
+
+@media (min-width: 521px) and (max-width: 768px) {
+	.container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 70px;
+		width: 90%;
+		border: none;
+		margin: auto;
+		padding: 100px 10px;
+	}
+
+	h1 {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 50px;
+		gap: 10px;
+	}
+
+	h1 img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.pricing-container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		/* height: 100%; */
+		justify-content: space-between;
+		/* flex-wrap: wrap; */
+		margin-bottom: 100px;
+		border: none;
+		gap: 50px;
+		align-items: center;
+	}
+
+	.pricing-card {
+		/* Add your styles here */
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+		font-size: 18px;
+		justify-content: space-around;
+		padding: 10px 15px;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 30px -20px #7a7573;
+		gap: 10px;
+
+		/* margin: 10px; */
+		height: 500px;
+	}
+
+	.pricing-card:hover {
+		/* Add your styles here */
+		border: 1.5px solid #ff9533;
+	}
+
+	.pricing-card.popular {
+		/* Add your styles here */
+	}
+
+	.popular-badge {
+		/* Add your styles here */
+		position: absolute;
+		display: inline;
+		padding: 5px 15px;
+		background-color: #ff7800;
+		border-radius: 15px;
+		top: -17px;
+		color: white;
+	}
+
+	.price {
+		/* Add your styles here */
+		font-weight: bold;
+		font-size: 2em;
+	}
+
+	.period {
+		/* Add your styles here */
+		font-size: 0.8em;
+		color: #7a7573;
+	}
+
+	.features {
+		/* Add your styles here */
+		list-style: none;
+		/* list-style-position: inside; */
+		/* padding-left: 30px; */
+	}
+
+	.features li {
+		/* Add your styles here */
+		/* padding-left: 20px; */
+		text-align: center;
+	}
+
+	.features li::marker {
+		content: "☕";
+		/* color: #ff9533; */
+		font-size: 15px;
+	}
+	.subscribe-btn {
+		/* Add your styles here */
+		border-radius: 20px;
+		padding: 7px 17px;
+		background-color: #ff9533;
+		border: none;
+		font-weight: 500;
+		margin-top: 10px;
+	}
+
+	.subscribe-btn:hover {
+		/* Add your styles here */
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1068px) {
+	.container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 70px;
+		width: 90%;
+		border: none;
+		margin: auto;
+		padding: 100px 10px;
+	}
+
+	h1 {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 70px;
+		gap: 10px;
+	}
+
+	h1 img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.pricing-container {
+		/* Add your styles here */
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		/* height: 100%; */
+		justify-content: space-between;
+		/* flex-wrap: wrap; */
+		margin-bottom: 100px;
+		border: none;
+		gap: 50px;
+		align-items: center;
+	}
+
+	.pricing-card {
+		/* Add your styles here */
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+		font-size: 18px;
+		justify-content: space-around;
+		padding: 10px 15px;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 30px -20px #7a7573;
+		gap: 10px;
+
+		/* margin: 10px; */
+		height: 500px;
+	}
+
+	.pricing-card:hover {
+		/* Add your styles here */
+		border: 1.5px solid #ff9533;
+	}
+
+	.pricing-card.popular {
+		/* Add your styles here */
+	}
+
+	.popular-badge {
+		/* Add your styles here */
+		position: absolute;
+		display: inline;
+		padding: 5px 15px;
+		background-color: #ff7800;
+		border-radius: 15px;
+		top: -17px;
+		color: white;
+	}
+
+	.price {
+		/* Add your styles here */
+		font-weight: bold;
+		font-size: 2em;
+	}
+
+	.period {
+		/* Add your styles here */
+		font-size: 0.8em;
+		color: #7a7573;
+	}
+
+	.features {
+		/* Add your styles here */
+		list-style: none;
+		/* list-style-position: inside; */
+		/* padding-left: 30px; */
+	}
+
+	.features li {
+		/* Add your styles here */
+		/* padding-left: 20px; */
+		text-align: center;
+	}
+
+	.features li::marker {
+		content: "☕";
+		/* color: #ff9533; */
+		font-size: 15px;
+	}
+	.subscribe-btn {
+		/* Add your styles here */
+		border-radius: 20px;
+		padding: 7px 17px;
+		background-color: #ff9533;
+		border: none;
+		font-weight: 500;
+		margin-top: 10px;
+	}
+
+	.subscribe-btn:hover {
+		/* Add your styles here */
+	}
 }
