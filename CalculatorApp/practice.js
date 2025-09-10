@@ -1,17 +1,33 @@
-// functionality of decimal
-
+const input = document.getElementById("inputTag");
 const decimalButton = document.getElementById("decimal");
-console.log(decimalButton);
-
+const numbers = document.getElementsByClassName("nos");
 let strToBeOperatedOn = "";
+let currOperand = "";
 
-let str1 = "123x";
-console.log(addDecimal(str1));
+// Event Listener of numbers
 
+for (let i = 0; i < numbers.length; i++) {
+	numbers[i].addEventListener("click", (e) => {
+		let valInInput = input.value;
+		let lastChar = valInInput.charAt(valInInput.length - 1);
+		let isLastCharOp = checkIfOporNot(lastChar);
+
+		if (isLastCharOp.isOp) {
+			createOperand(valInInput);
+			currOperand += e.innerText;
+			console.log(currOperand);
+		} else {
+		}
+	});
+}
+
+// Event Listener of Decimal Button
 decimalButton.addEventListener("click", (e) => {
 	let str = "";
 	let afterDecimalString = addDecimal(str);
 });
+
+// functionality of decimal
 
 function addDecimal(str) {
 	if (str.length === 1 && str === "0") {
@@ -29,6 +45,7 @@ function addDecimal(str) {
 	}
 }
 
+// Check Operation or Not Functionality
 function checkIfOporNot(char) {
 	const arr = ["+", "-", "x", "/"];
 	const retObj = {
