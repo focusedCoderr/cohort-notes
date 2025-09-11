@@ -15,110 +15,161 @@ display();
 // Event Listener for equal Button
 
 equalButton.addEventListener("click", () => {
-	const lastChar = currOperand.charAt(currOperand.length - 1);
-	if (checkIfOporNot(lastChar).isOp) {
-		currOperand = currOperand.substring(0, currOperand.length - 1);
-	}
-	strToBeOperatedOn += currOperand;
+  const lastChar = currOperand.charAt(currOperand.length - 1);
+  if (checkIfOporNot(lastChar).isOp) {
+    currOperand = currOperand.substring(0, currOperand.length - 1);
+  }
+  strToBeOperatedOn += currOperand;
 
-	console.log(strToBeOperatedOn);
+  console.log(strToBeOperatedOn);
 
-	currOperand = "0";
-	calculate();
+  currOperand = "0";
+  calculate2();
 });
 
 function calculate() {
-	const valInString = strToBeOperatedOn;
-	console.log(valInString);
+  const valInString = strToBeOperatedOn;
+  console.log(valInString);
 
-	const calArr = [];
-	let finalVal = 0;
+  const calArr = [];
+  let finalVal = 0;
 
-	let startIndex = 0;
-	for (let i = 0; i < valInString.length; i++) {
-		const currChar = valInString.charAt(i);
-		console.log(currChar);
+  let startIndex = 0;
+  for (let i = 0; i < valInString.length; i++) {
+    const currChar = valInString.charAt(i);
+    console.log(currChar);
 
-		const opOrNotObj = checkIfOporNot(currChar);
-		console.log(opOrNotObj);
+    const opOrNotObj = checkIfOporNot(currChar);
+    console.log(opOrNotObj);
 
-		if (opOrNotObj.isOp) {
-			const num = Number(valInString.substring(startIndex, i));
-			startIndex = i + 1;
-			calArr.push(num);
-			calArr.push(opOrNotObj);
-		} else if (i === valInString.length - 1) {
-			calArr.push(Number(valInString[i]));
-		}
-	}
-	console.log(calArr);
+    if (opOrNotObj.isOp) {
+      const num = Number(valInString.substring(startIndex, i));
+      startIndex = i + 1;
+      calArr.push(num);
+      calArr.push(opOrNotObj);
+    } else if (i === valInString.length - 1) {
+      calArr.push(Number(valInString[i]));
+    }
+  }
+  console.log(calArr);
 
-	if (calArr.length === 1 || calArr.length === 2) {
-		finalVal = calArr[0];
-		console.log(finalVal);
+  if (calArr.length === 1 || calArr.length === 2) {
+    finalVal = calArr[0];
+    console.log(finalVal);
 
-		//send this value for display and break
-	}
+    //send this value for display and break
+  }
 
-	const DivMulDoneArr = [];
+  const DivMulDoneArr = [];
 
-	for (let i = 0; i < calArr.length; i = i + 1) {
-		if (calArr[i].isOp && i !== calArr.length - 1) {
-			if (calArr[i].isMul) {
-				let popRes = DivMulDoneArr.pop();
-				let mulResult = popRes * calArr[i + 1];
-				DivMulDoneArr.push(mulResult);
-				i++;
-			} else if (calArr[i].isDiv) {
-				let popRes = DivMulDoneArr.pop();
-				let divResult = popRes / calArr[i + 1];
-				DivMulDoneArr.push(divResult);
-				i++;
-			} else {
-				DivMulDoneArr.push(calArr[i]);
-			}
-		} else {
-			DivMulDoneArr.push(calArr[i]);
-		}
-	}
-	console.log(DivMulDoneArr);
-	finalVal = DivMulDoneArr[0];
-	for (let i = 1; i < DivMulDoneArr.length; i++) {
-		if (DivMulDoneArr[i].isOp) {
-			if (DivMulDoneArr[i].isAdd) {
-				finalVal = finalVal + DivMulDoneArr[i + 1];
-				i++;
-			} else if (DivMulDoneArr[i].isSub) {
-				finalVal = finalVal - DivMulDoneArr[i + 1];
-				i++;
-			}
-		}
-	}
-	console.log(finalVal);
+  for (let i = 0; i < calArr.length; i = i + 1) {
+    if (calArr[i].isOp && i !== calArr.length - 1) {
+      if (calArr[i].isMul) {
+        let popRes = DivMulDoneArr.pop();
+        let mulResult = popRes * calArr[i + 1];
+        DivMulDoneArr.push(mulResult);
+        i++;
+      } else if (calArr[i].isDiv) {
+        let popRes = DivMulDoneArr.pop();
+        let divResult = popRes / calArr[i + 1];
+        DivMulDoneArr.push(divResult);
+        i++;
+      } else {
+        DivMulDoneArr.push(calArr[i]);
+      }
+    } else {
+      DivMulDoneArr.push(calArr[i]);
+    }
+  }
+  console.log(DivMulDoneArr);
+  finalVal = DivMulDoneArr[0];
+  for (let i = 1; i < DivMulDoneArr.length; i++) {
+    if (DivMulDoneArr[i].isOp) {
+      if (DivMulDoneArr[i].isAdd) {
+        finalVal = finalVal + DivMulDoneArr[i + 1];
+        i++;
+      } else if (DivMulDoneArr[i].isSub) {
+        finalVal = finalVal - DivMulDoneArr[i + 1];
+        i++;
+      }
+    }
+  }
+  console.log(finalVal);
 }
 
 function calculate2() {
-	const calArr = [];
-	let startIndex = 0;
-	for (let i = 0; i < strToBeOperatedOn.length; i++) {
-		const currChar = strToBeOperatedOn.charAt(i);
-		const opOrNotObj = checkIfOporNot(currChar);
-		if (opOrNotObj.isOp) {
-			let numstring = strToBeOperatedOn.substring(startIndex, i);
-			startIndex = i + 1;
-			calArr.push(numstring);
-			calArr.push(opOrNotObj);
-		}
-		if (currChar === "(") {
-			let negNum = "";
-			for (let j = i + 1; strToBeOperatedOn.charAt(j) !== ")"; j++) {
-				negNum += strToBeOperatedOn.charAt(j);
-				i++;
-			}
-			i++;
-			calArr.push(negNum);
-		}
-	}
+  const calArr = [];
+  let startIndex = 0;
+  for (let i = 0; i < strToBeOperatedOn.length; i++) {
+    const currChar = strToBeOperatedOn.charAt(i);
+    const opOrNotObj = checkIfOporNot(currChar);
+    if (opOrNotObj.isOp) {
+      let numStringNum = Number(strToBeOperatedOn.substring(startIndex, i));
+      startIndex = i + 1;
+      calArr.push(numStringNum);
+      calArr.push(opOrNotObj);
+    } else if (currChar === "(") {
+      let negString = "";
+      for (let j = i + 1; strToBeOperatedOn.charAt(j) !== ")"; j++) {
+        negString += strToBeOperatedOn.charAt(j);
+        i++;
+      }
+      let negStringNum = Number(negString);
+      i = i + 2;
+      calArr.push(negStringNum);
+      if (i !== strToBeOperatedOn.length) {
+        let newCurrChar = strToBeOperatedOn.charAt(i);
+        let newOpObj = checkIfOporNot(newCurrChar);
+        calArr.push(newOpObj);
+        startIndex = i + 1;
+      }
+    } else if (i === strToBeOperatedOn.length - 1) {
+      let numStringNum = Number(strToBeOperatedOn.substring(startIndex, i + 1));
+      calArr.push(numStringNum);
+    }
+
+    const DivMulDoneArr = [];
+    let finalVal = 0;
+
+    for (let i = 0; i < calArr.length; i = i + 1) {
+      if (calArr[i].isOp && i !== calArr.length - 1) {
+        if (calArr[i].isMul) {
+          let popRes = DivMulDoneArr.pop();
+          let mulResult = popRes * calArr[i + 1];
+          DivMulDoneArr.push(mulResult);
+          i++;
+        } else if (calArr[i].isDiv) {
+          let popRes = DivMulDoneArr.pop();
+          let divResult = popRes / calArr[i + 1];
+          DivMulDoneArr.push(divResult);
+          i++;
+        } else {
+          DivMulDoneArr.push(calArr[i]);
+        }
+      } else {
+        DivMulDoneArr.push(calArr[i]);
+      }
+    }
+    console.log(DivMulDoneArr);
+    finalVal = DivMulDoneArr[0];
+    for (let i = 1; i < DivMulDoneArr.length; i++) {
+      if (DivMulDoneArr[i].isOp) {
+        if (DivMulDoneArr[i].isAdd) {
+          finalVal = finalVal + DivMulDoneArr[i + 1];
+          i++;
+        } else if (DivMulDoneArr[i].isSub) {
+          finalVal = finalVal - DivMulDoneArr[i + 1];
+          i++;
+        }
+      }
+    }
+    console.log(finalVal);
+    display();
+
+    input.value = finalVal;
+  }
+
+  console.log(calArr);
 }
 // Event Listener for delete Button
 
