@@ -18,75 +18,7 @@ clearButton.addEventListener("click", (e) => {
 
 // Equal Button Functionality
 
-equalButton.addEventListener("click", () => {
-	const valInString = inputTag.value;
-	console.log(valInString);
-
-	const calArr = [];
-	let finalVal = 0;
-
-	let startIndex = 0;
-	for (let i = 0; i < valInString.length; i++) {
-		const currChar = valInString.charAt(i);
-		console.log(currChar);
-
-		const opOrNotObj = checkIfOporNot(currChar);
-		console.log(opOrNotObj);
-
-		if (opOrNotObj.isOp) {
-			const num = Number(valInString.substring(startIndex, i));
-			startIndex = i + 1;
-			calArr.push(num);
-			calArr.push(opOrNotObj);
-		} else if (i === valInString.length - 1) {
-			calArr.push(Number(valInString[i]));
-		}
-	}
-	console.log(calArr);
-
-	if (calArr.length === 1 || calArr.length === 2) {
-		finalVal = calArr[0];
-		console.log(finalVal);
-
-		//send this value for display and break
-	}
-
-	const DivMulDoneArr = [];
-
-	for (let i = 0; i < calArr.length; i = i + 1) {
-		if (calArr[i].isOp && i !== calArr.length - 1) {
-			if (calArr[i].isMul) {
-				let popRes = DivMulDoneArr.pop();
-				let mulResult = popRes * calArr[i + 1];
-				DivMulDoneArr.push(mulResult);
-				i++;
-			} else if (calArr[i].isDiv) {
-				let popRes = DivMulDoneArr.pop();
-				let divResult = popRes / calArr[i + 1];
-				DivMulDoneArr.push(divResult);
-				i++;
-			} else {
-				DivMulDoneArr.push(calArr[i]);
-			}
-		} else {
-			DivMulDoneArr.push(calArr[i]);
-		}
-	}
-	console.log(DivMulDoneArr);
-	finalVal = DivMulDoneArr[0];
-	for (let i = 1; i < DivMulDoneArr.length; i++) {
-		if (DivMulDoneArr[i].isOp) {
-			if (DivMulDoneArr[i].isAdd) {
-				finalVal = finalVal + DivMulDoneArr[i + 1];
-				i++;
-			} else if (DivMulDoneArr[i].isSub) {
-				finalVal = finalVal - DivMulDoneArr[i + 1];
-				i++;
-			}
-		}
-	}
-	console.log(finalVal);
-});
+equalButton.addEventListener("click", () => {});
 
 // display Functionality
 function displayValInInput(val) {

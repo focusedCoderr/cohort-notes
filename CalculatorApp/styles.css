@@ -47,6 +47,10 @@
 	text-align: left;
 	/* margin-top: 10px; */
 }
+
+#totalString {
+	all: unset;
+}
 p {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
