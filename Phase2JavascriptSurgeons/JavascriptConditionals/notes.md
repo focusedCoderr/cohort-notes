@@ -466,6 +466,8 @@ const obj4 = { ...obj3 };
 - Blog on 1:39:00 - JS Objects and Prototypes
 
 - ## DOM: Document Object Model
+- When an HTML document is rendered the browser makes a tree in which everything is a `node`.
+- So, you cannot simply add a text inside a `node`, First you have to make a textNode and then append it in another `node` using `appendChild()` method or any other method
 
 - Blog: Events in dom, what they do, what type of events are there, funny take on events connecting them to day to day life, if possible, abalogies of click event, dbl clkick event, browser resizing, mouse position kahan pe hai
 

@@ -136,6 +136,23 @@
 
 ---
 
+- `<input type="submit">` --> Submits the key value pair of the form input elements to the server which was defined in the `action` attribute of the `form` element.
+- If no `action` attribute is defined, it sends the data to the current url
+- The `method` attribute of the form (`GET` or `POST`) determines how the data is sent.
+
+---
+
+```js
+<form>
+	<button type="button">Do Something</button>
+</form>
+```
+
+- If `type` attribute is not defined when the button is in the form element, then default `type` is submit and clicking the button will activate the `action` attribute
+- So, if you want to add some functionality to the button, you should mention `type=button` so that it does not trigger the `action` attribute of the form
+
+---
+
 - pattern attribute is sometimes used to restrict the type of data that can be entered in a form field. in the pattern attribute --> type the required regular expression to restrict the data to be entered in the form.
 
 ## Regular Expressions (Regex) for Form Validation
