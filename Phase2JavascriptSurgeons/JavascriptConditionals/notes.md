@@ -462,6 +462,13 @@ const obj4 = { ...obj3 };
 
 - Garbage collector : When the scope of variables run out and actually there is no pointer pointing towards an object in the heap, then that object needs to be cleared from the heap memory. This is the job of garbage collector. In javascipt we do not have to worry about garbage collection because it is done by the engine itself.
 
+#### Prototypes:
+
+##### Objects
+
+- Representation of real world objects in code.
+- It has some functionality and properties
+
 - NOTE: come back at 24:16 in machine coding on Prototypes
 - Blog on 1:39:00 - JS Objects and Prototypes
 
