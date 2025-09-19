@@ -47,19 +47,40 @@
 // object2.hello();
 
 function Hero(firstName, lastName) {
-	this.firstName = firstName;
-	this.lastName = lastName;
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
 Hero.prototype.shoutName = function () {
-	console.log(`My name is Mr. ${this.firstName} ${this.lastName}`);
+  console.log(`My name is Mr. ${this.firstName} ${this.lastName}`);
 };
 
 Hero.prototype.alone = function () {
-	console.log("I am alone in this world");
+  console.log("I am alone in this world");
 };
 
 const anthony = new Hero("Anthony", "Gonsalvez");
 
 anthony.shoutName();
 anthony.alone();
+
+const carIn1940 = {
+  drive() {
+    console.log("The driver is now driving the car");
+  },
+};
+
+const prototypeOf1940Car = Object.getPrototypeOf(carIn1940);
+
+// const carIn1970 = Object.create();
+const carIn1970 = {
+  playMusic() {
+    console.log("Now you can also listen to music while driving the car");
+  },
+};
+
+carIn2000 = {
+  watchMovieInBackSeat() {
+    console.log("Now you can watch a movie while the driver drives the car");
+  },
+};
