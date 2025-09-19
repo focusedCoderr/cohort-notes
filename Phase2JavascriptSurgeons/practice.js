@@ -70,17 +70,12 @@ const carIn1940 = {
   },
 };
 
-const prototypeOf1940Car = Object.getPrototypeOf(carIn1940);
-
-// const carIn1970 = Object.create();
-const carIn1970 = {
-  playMusic() {
-    console.log("Now you can also listen to music while driving the car");
-  },
+const carIn1970 = Object.create(carIn1940);
+carIn1970.playMusic = function () {
+  console.log("Now you can also listen to music while driving the car");
 };
 
-carIn2000 = {
-  watchMovieInBackSeat() {
-    console.log("Now you can watch a movie while the driver drives the car");
-  },
+const carIn2000 = Object.create(carIn1970);
+carIn2000.watchMovieInBackSeat = function () {
+  console.log("Now you can watch a movie while the driver drives the car");
 };
