@@ -120,8 +120,26 @@ class Car {
 	}
 }
 
-const carIn1940 = new Car("Just Car", 1940);
+class SmallCar extends Car {
+  constructor(name, year, build) {
+    super(name, year);
+    this.build = build;
+  }
+}
 
-carIn1940.drive();
+const aSmallCar = new SmallCar("asmallcar", 2024, "Steel");
+console.log(aSmallCar.name);
+console.log(aSmallCar.year);
+console.log(aSmallCar.build);
+aSmallCar.drive();
 
-const carIn1970 = new Car();
+// console.log(typeof Car);
+
+// const carIn1940 = new Car("Just Car", 1940);
+
+// carIn1940.drive();
+// Car.prototype.playMusic = function () {
+//   console.log("Now you can also listen to music while driving the car");
+// };
+
+// const carIn1970 = new Car();
